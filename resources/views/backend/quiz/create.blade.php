@@ -11,8 +11,6 @@
      		<div class="alert alert-success">{{Session::get('message')}}</div>
      	@endif
 
-
-
          <form action="{{route('quiz.store')}}" method="POST">@csrf
 			
             <div class="module">
@@ -65,7 +63,6 @@
                     </div>
 
                 </div>
-
 
                 </div>
             </div>
