@@ -10,6 +10,7 @@
 
         @endif
             <div class="card">
+                <example-component></example-component>
                 <div class="card-header">Exam</div>
 
                 @if($isExamAssigned)
