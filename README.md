@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Sobre o Aplicativo 
+
+O QuizApp é um aplicativo para desenvolvimento de exercícios 
+
+Como utilizar:
+
+Clone o repositório
+Rode o comando: php artisan serve && npm run dev em terminais diferentes e você já pode utilizar a aplicacão de forma
+bem intuitiva e fácil.
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
