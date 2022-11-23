@@ -21,7 +21,24 @@
                                     </b> </a></li>
                                 
                             </ul>
-                            
+
+                            <ul class="widget widget-menu unstyled">
+                                
+                                <li><a href="{{route('user.create')}}"><i class="menu-icon icon-bullhorn"></i> User Question </a>
+                                </li>
+                                <li><a href="{{route('user.index')}}"><i class="menu-icon icon-inbox"></i>View User <b class="label green pull-right">
+                                    </b> </a></li>
+                                
+                            </ul> 
+
+                            <ul class="widget widget-menu unstyled">
+                                
+                                <li><a href="{{route('user.exam')}}"><i class="menu-icon icon-bullhorn"></i> Assign Exam </a>
+                                </li>
+                                <li><a href="{{route('view.exam')}}"><i class="menu-icon icon-inbox"></i>View User Exam <b class="label green pull-right">
+                                    </b> </a></li>
+                                
+                            </ul> 
                         
                             <!--/.widget-nav-->
                             <ul class="widget widget-menu unstyled">
