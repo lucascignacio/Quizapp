@@ -15,7 +15,6 @@ class QuizController extends Controller
     public function index()
     {
         $quizzes = (new Quiz)->allQuiz();
-
         return view('backend.quiz.index', compact('quizzes'));
     }
 
@@ -40,8 +39,7 @@ class QuizController extends Controller
         $data = $this->validateForm($request);
 
         $quiz = (new Quiz)->storeQuiz($data);
-        
-        return redirect()->back()->with('message', 'Quiz created successfully');
+        return redirect()->back()->with('message', 'Quiz Created Successfully');
     }
 
     /**
@@ -63,7 +61,7 @@ class QuizController extends Controller
      */
     public function edit($id)
     {
-        $quiz = (new Quiz)->getQuizById($id);
+        $quiz = (new Quiz)->editQuiz($id);
         return view('backend.quiz.edit', compact('quiz'));
     }
 
@@ -91,8 +89,13 @@ class QuizController extends Controller
     public function destroy($id)
     {
         (new Quiz)->deleteQuiz($id);
-
         return redirect(route('quiz.index'))->with('message', 'Quiz Deleted Successfully!');
+    }
+
+    public function question($id)
+    {
+        $quizzes = Quiz::with('questions')->where('id', $id)->get();
+        return view('backend.quiz.question' ,compact('quizzes'));
     }
 
     public function validateForm($request)
