@@ -31,6 +31,16 @@ class Answer extends Model
                 'is_correct' => $is_correct
             ]);
         }
-        
+    }
+
+    public function updateAnswer($data, $question)
+    {
+        $this->deleteAnswer($question->id);
+        $this->storeAnswer($data, $question);
+    }
+
+    public function deleteAnswer($questionId)
+    {
+        Answer::where('question_id', $questionId)->delete();
     }
 }
